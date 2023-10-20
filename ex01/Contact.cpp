@@ -1,5 +1,18 @@
 #include "Contact.hpp"
 #include <cstdlib>
+#include <string>
+
+bool strIsPrint(std::string str)
+{
+	for(std::string::iterator it = str.begin(); it != str.end();)
+	{
+		if(!std::isprint(*it))
+			return (false);
+		else
+			it++;
+	}
+	return (true);
+}
 
 Contact::Contact()
 {
@@ -9,22 +22,23 @@ Contact::~Contact()
 {
 }
 
-void    Contact::init() {
+bool    Contact::init() {
    	std::cout << "First Name: " << std::flush;
-	if (!std::getline(std::cin, _firstName) || _firstName.empty())
-		std::exit(0);
+	if (!std::getline(std::cin, _firstName) || !strIsPrint(_firstName) || _firstName.empty())
+		return (false);
 	std::cout << "Last Name: " << std::flush;
-	if (!std::getline(std::cin, _lastName) || _lastName.empty())
-		std::exit(1);
+	if (!std::getline(std::cin, _lastName) || !strIsPrint(_lastName) || _lastName.empty())
+		return (false);
 	std::cout << "Nickname: " << std::flush;
-	if (!std::getline(std::cin, _nickname) || _nickname.empty())
-		std::exit(1);
+	if (!std::getline(std::cin, _nickname) || !strIsPrint(_nickname) || _nickname.empty())
+		return (false);
 	std::cout << "Phone Number: " << std::flush;
-	if (!std::getline(std::cin, _phoneNumber) || _phoneNumber.empty())
-		std::exit(1);
+	if (!std::getline(std::cin, _phoneNumber) || !strIsPrint(_phoneNumber) || _phoneNumber.empty())
+		return (false);
 	std::cout << "Darkest Secret: " << std::flush;
-	if (!std::getline(std::cin, _darkestSecret) || _darkestSecret.empty())
-		std::exit(1);
+	if (!std::getline(std::cin, _darkestSecret) || !strIsPrint(_darkestSecret) || _darkestSecret.empty())
+		return (false);
+	return (true);
 }
 
 std::string Contact::_truncten(std::string str) const {

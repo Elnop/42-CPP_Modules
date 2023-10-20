@@ -1,9 +1,11 @@
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 void    addContact(Contact contacts[8]) {
     static int  i = 0;
-    contacts[i].init();
+    if (!contacts[i].init())
+		return ;
 	if (i < 7)
     	i++;
 	else
@@ -40,16 +42,16 @@ void	welcome()
 
 int main() {
 	std::string	cmd;
-	Contact contacts[8];
+	PhoneBook	phonebook;
 
 	welcome();
 	std::cout << "> " << std::flush;
 	while (getline(std::cin,cmd) && cmd.compare("EXIT"))
 	{
 		if (!cmd.compare("ADD"))
-			addContact(contacts);
+			addContact(phonebook.contacts);
 		if (!cmd.compare("SEARCH"))
-			search(contacts);
+			search(phonebook.contacts);
 		std::cout << "> " << std::flush;
 	}
 	return 0;

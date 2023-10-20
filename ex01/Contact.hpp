@@ -18,9 +18,9 @@ class Contact
 	public:
 		Contact();
 		~Contact();
-		void    init();
+		bool    init();
 		void    view(int index) const;
 		void    display(int index) const;
 };
 
-#endif // CONTACT_HPP
+#endif

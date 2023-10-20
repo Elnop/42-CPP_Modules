@@ -3,9 +3,9 @@ NAME = phonebook
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Contact.hpp
+INCLUDES = Contact.hpp PhoneBook.hpp
 
-FILES = Contact main
+FILES = Contact main PhoneBook
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
