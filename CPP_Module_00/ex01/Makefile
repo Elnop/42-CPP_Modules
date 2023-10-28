@@ -9,7 +9,7 @@ FILES = Contact main PhoneBook
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
-OBJS_DIR = obj
+OBJS_DIR = .obj
 OBJS = ${patsubst %.cpp, ${OBJS_DIR}/%.o, ${SRCS}}
 
 all: $(NAME)
@@ -29,4 +29,4 @@ fclean: clean
 
 re: clean all
 
-.PHONY: all clean fclean re makelib
+.PHONY: all clean fclean re

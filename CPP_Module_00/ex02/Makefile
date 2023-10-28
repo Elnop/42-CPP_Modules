@@ -9,7 +9,7 @@ FILES = Account tests
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
-OBJS_DIR = obj
+OBJS_DIR = .obj
 OBJS = ${patsubst %.cpp, ${OBJS_DIR}/%.o, ${SRCS}}
 
 all: $(NAME)
