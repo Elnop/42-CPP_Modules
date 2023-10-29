@@ -1,11 +1,11 @@
-NAME = bankster
+NAME = HI_THIS_IS_BRAIN
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Account.hpp
+INCLUDES = 
 
-FILES = Account tests
+FILES = main
 
 SRCS = $(addsuffix .cpp, $(FILES))
 

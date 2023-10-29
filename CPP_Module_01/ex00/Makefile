@@ -1,11 +1,11 @@
-NAME = bankster
+NAME = zombie
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Account.hpp
+INCLUDES = Zombie.hpp
 
-FILES = Account tests
+FILES = main newZombie randomChump Zombie
 
 SRCS = $(addsuffix .cpp, $(FILES))
 

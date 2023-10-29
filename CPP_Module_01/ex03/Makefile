@@ -1,11 +1,11 @@
-NAME = bankster
+NAME =  Unnecessary_violence
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Account.hpp
+INCLUDES = Human.hpp Weapon.hpp
 
-FILES = Account tests
+FILES = main Human Weapon
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
