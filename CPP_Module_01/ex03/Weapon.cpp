@@ -1,9 +1,4 @@
-#include "Weapon.hpp"
-
-Weapon::Weapon()
-{
-	this->type = "nothing";
-}
+#include "Weapon.h"
 
 Weapon::Weapon(std::string type)
 {

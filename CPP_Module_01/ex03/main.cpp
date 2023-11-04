@@ -6,11 +6,12 @@
 /*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 04:39:37 by lperroti          #+#    #+#             */
-/*   Updated: 2023/10/29 05:42:59 by lperroti         ###   ########.fr       */
+/*   Updated: 2023/11/04 16:23:22 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Human.hpp"
+#include "HumanA.h"
+#include "HumanB.h"
 
 /*
 	This main are very ugly ?
@@ -21,14 +22,14 @@ int main()
 {
 	{
 		Weapon club = Weapon("crude spiked club");
-		Human bob("Bob", club);
+		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
 		bob.attack();
 	}
 	{
 		Weapon club = Weapon("crude spiked club");
-		Human jim("Jim");
+		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");

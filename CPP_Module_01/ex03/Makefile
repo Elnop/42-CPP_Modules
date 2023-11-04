@@ -3,9 +3,9 @@ NAME =  Unnecessary_violence
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = Human.hpp Weapon.hpp
+INCLUDES = HumanA.h HumanB.h Weapon.h
 
-FILES = main Human Weapon
+FILES = main HumanA HumanB Weapon
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
