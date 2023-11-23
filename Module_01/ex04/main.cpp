@@ -34,12 +34,11 @@ int	main(int ac, char **av)
 		size_t currPos = 0;
 		while (found != std::string::npos)
 		{
-			outLine += inLine.substr(currPos, found);
+			outLine += inLine.substr(currPos, found - currPos);
 			outLine += s2;
 			currPos = found + s1.length();
 			found = inLine.find(av[2], currPos);
 		}
-
 		outfileStream << outLine << inLine.substr(currPos) << "\n";
 	}
 }

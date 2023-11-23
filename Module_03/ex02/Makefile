@@ -1,11 +1,11 @@
-NAME =  ScavTrap
+NAME =  FragTrap
 
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-INCLUDES = ClapTrap.h ScavTrap.h
+INCLUDES = ClapTrap.h FragTrap ScavTrap.h
 
-FILES = main ClapTrap ScavTrap
+FILES = main ClapTrap ScavTrap FragTrap
 
 SRCS = $(addsuffix .cpp, $(FILES))
 

@@ -1,11 +1,12 @@
-NAME =  ScavTrap
+NAME =  materia
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
-INCLUDES = ClapTrap.h ScavTrap.h
+INCLUDES = AMateria.h ICharacter.h Ice.h Cure.h Character.h \
+		MateriaSource.h ICharacter.h IMateriaSource.h
 
-FILES = main ClapTrap ScavTrap
+FILES = AMateria Character MateriaSource Ice Cure main
 
 SRCS = $(addsuffix .cpp, $(FILES))
 

@@ -1,12 +1,13 @@
 #include "ClapTrap.h"
+#include "ScavTrap.h"
 
 int main(void)
 {
-	ClapTrap clap("Clap1");
-	ClapTrap clap2;
-	ClapTrap clap3 = clap;
+	ScavTrap clap("Clap1");
+	ScavTrap clap2;
+	clap.guardGate();
 	clap.attack("Clap2");
 	clap2.takeDamage(5);
-	clap.beRepaired(3);
+	clap2.beRepaired(3);
 	return 0;
 }

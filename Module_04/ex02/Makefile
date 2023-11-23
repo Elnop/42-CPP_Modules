@@ -1,11 +1,11 @@
-NAME =  ScavTrap
+NAME =  Animals
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
-INCLUDES = ClapTrap.h ScavTrap.h
+INCLUDES = Animal.h Cat.h Dog.h Brain.h
 
-FILES = main ClapTrap ScavTrap
+FILES = main Animal Cat Dog Brain
 
 SRCS = $(addsuffix .cpp, $(FILES))
 
